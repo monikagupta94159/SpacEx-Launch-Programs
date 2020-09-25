@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-size: 20px;
+  overflow-x: hidden;
+}
+.container {
+  background-color:#e5e5e5 ;
+  padding: .5%;
+  /* height: 100vh; */
+}
+
+.heading{
+  margin-bottom: 3%;
+}
+
+.row{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.left{
+  float: left;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 3% 2%;
+  width: 20%;
+  margin-right: 1%;
+}
+
+.right{
+  float: right;
+  width: 79%;
+}
+
+.clearfix:after{
+  visibility: hidden;
+  content: "";
+  display: flex;
+  clear: both;
+}
+
+.column{
+  float: left;
+  width: 23%;
+  padding: 2% 2%;
+  margin: 0 1% 2% 1%;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.paragraph{
+  font-size: 120%;
+  border-bottom: 2px solid black;
+  text-align: center;
+  margin: 5% 0;
+  width: 100%
+}
+
+.left-date{
+  float: left;
+}
+
+.right-date{
+  float: right;
+}
+
+.filters {
+  padding: 3%;
+  background-color: #BCD88F;
+  margin: 7% 0;
+  border-radius: 5px;
+   width: 40%; 
+  text-align: center;
+}
+
+.selected {
+  background-color: #839764; 
+}
+.details{
+  display: flex;
+  overflow-x: hidden;
+  margin: 3% 0;
+}
+
+.column ul {
+  margin: 0 18%;
+  padding: 0;
+}
+
+.column h4 {
+  margin: 2% 0;
+  height: 2%;
+  overflow-x: hidden;
+}
+
+footer{
+  text-align: center;
+  margin: 2% 0 1% 0;
+ }
+
+ img{
+  background-color:#e5e5e5 ;
+}
+
+
+
+.text{
+  color: #6633CC;
+  height: 21px !important;
+  overflow: hidden;
+  margin-left: 5%;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1024px){
+  .column{
+    float: left;
+    width: 47%;
+    margin: 0 1% 2% 1%;
+  }
+  .left{
+    width: 27%;
+    margin-right: 1%;
+  }
+
+  .right{
+    float: right;
+    width: 72%;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .container{
+    padding: 2%; 
+   }
+
+  .left{
+    margin: 0 0 2% 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .right{
+    width: 100%;
+  }
+
+  .column{
+    width: 100%;
+    margin: 2% 0 ;
+  }
+
+  
+.column ul {
+  margin: 0 6%;
+  padding: 0;
+}
+
+}

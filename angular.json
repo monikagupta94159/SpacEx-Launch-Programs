@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "spaceXProgram"
+    }
+  },
+  "defaultProject": "spaceXProgram",
+  "cli": {
+    "analytics": "0595e3b3-a9c8-4435-a009-4f85463196dc"
+  }
 }

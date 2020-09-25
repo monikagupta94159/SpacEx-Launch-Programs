@@ -1,0 +1,81 @@
+
+  <div class="container">
+    <h1 class="heading"><b>SpacEX Launch Programs</b></h1>
+    <div class="row clearfix">
+        <div class="left">
+                <h2>Filters</h2>
+                <p class="paragraph">Launch year</p>
+                <div class="clearfix">
+                  <span [ngClass]="dateSelected === '2006' ? 'left-date filters selected' : 'left-date filters'"  (click)="filterDates('2006')">2006</span>
+                  <span [ngClass]="dateSelected === '2007' ? 'right-date filters selected' : 'right-date filters'"  (click)="filterDates('2007')">2007</span>
+                </div>
+                <div class="clearfix">
+                  <span  [ngClass]="dateSelected === '2008' ? 'left-date filters selected' : 'left-date filters'" class="left-date filters"  (click)="filterDates('2008')">2008</span>
+                  <span  [ngClass]="dateSelected === '2009' ? 'right-date filters selected' : 'right-date filters'" class="right-date filters" (click)="filterDates('2009')">2009</span>
+                </div>
+                <div class="clearfix">
+                  <span  [ngClass]="dateSelected === '2010' ? 'left-date filters selected' : 'left-date filters'"class="left-date filters" (click)="filterDates('2010')">2010</span>
+                  <span [ngClass]="dateSelected === '2011' ? 'right-date filters selected' : 'right-date filters'" class="right-date filters" (click)="filterDates('2011')">2011</span>
+                </div>
+                <div class="clearfix">
+                  <span class="left-date filters" [ngClass]="dateSelected === '2012' ? 'left-date filters selected' : 'left-date filters'"  (click)="filterDates('2012')">2012</span>
+                  <span class="right-date filters" [ngClass]="dateSelected === '2013' ? 'right-date filters selected' : 'right-date filters'" (click)="filterDates('2013')">2013</span>
+                </div>
+                <div class="clearfix">
+                  <span class="left-date filters"  [ngClass]="dateSelected === '2014' ? 'left-date filters selected' : 'left-date filters'" (click)="filterDates('2014')">2014</span>
+                  <span class="right-date filters" [ngClass]="dateSelected === '2015' ? 'right-date filters selected' : 'right-date filters'" (click)="filterDates('2015')">2015</span>
+                </div>
+                <div class="clearfix">
+                  <span class="left-date filters" [ngClass]="dateSelected === '2016' ? 'left-date filters selected' : 'left-date filters'" (click)="filterDates('2016')">2016</span>
+                  <span class="right-date filters" [ngClass]="dateSelected === '2017' ? 'right-date filters selected' : 'right-date filters'" (click)="filterDates('2017')">2017</span>
+                </div>
+                <div class="clearfix">
+                  <span class="left-date filters"  [ngClass]="dateSelected === '2018' ? 'left-date filters selected' : 'left-date filters'" (click)="filterDates('2018')">2018</span>
+                  <span class="right-date filters" [ngClass]="dateSelected === '2019' ? 'right-date filters selected' : 'right-date filters'" (click)="filterDates('2019')">2019</span>
+                </div>
+                <div class="clearfix">
+                  <span class="left-date filters"  [ngClass]="dateSelected === '2020' ? 'left-date filters selected' : 'left-date filters'" (click)="filterDates('2020')">2020</span>
+                </div>
+                  <p class="paragraph">Successful Launch</p>
+                <div class="clearfix">
+                  <span [ngClass]="launchValue === 'true' ? 'left-date filters selected' : 'left-date filters'" (click)="filterLaunch('true')">True</span>
+                  <span [ngClass]="launchValue === 'false' ? 'right-date filters selected' : 'right-date filters'" (click)="filterLaunch('false')">False</span>
+                </div>
+                <p class="paragraph">Successful Landing</p>
+                <div class="clearfix">
+                  <span [ngClass]="landValue === 'true' ? 'left-date filters selected' : 'left-date filters'" (click)="filterLand('true')">True</span>
+                  <span [ngClass]="landValue === 'false' ? 'right-date filters selected' : 'right-date filters'" (click)="filterLand('false')">False</span>
+                </div>
+           
+         </div>
+     
+      <div class="right">
+          <div class="clearfix">
+                <div class="column" *ngFor="let data of spaceXData; let i = index">
+                       <div class="image"> 
+                         <img [src]="data.links.mission_patch" alt="Cinque Terre" width="100%" height="200">
+                      </div>
+                        <h4 class="text">{{data.mission_name}} #{{i + 1}}</h4>
+                        <h4> Mission Ids </h4>
+                        <ul><li class="text">{{data.mission_id}}</li></ul>
+                        <div class="details">
+                          <span><b>Launch Year:</b></span>
+                          <span class="text">{{data.launch_year}}</span>  
+                        </div>
+                        <div class="details">
+                          <span><b>Successful Launch:</b></span>
+                          <span class="text">{{data.launch_success}}</span>  
+                        </div>
+                        <div class="details">
+                          <span><b>Successful Landing:</b></span>
+                          <span class="text">{{data.land_success}}</span>  
+                        </div>
+                </div>
+            </div>
+         </div>  
+    </div>
+  <footer>
+        <span><b>Developed by: </b> <span>Monika Gupta</span></span>
+  </footer>
+  </div>
+<router-outlet></router-outlet>
