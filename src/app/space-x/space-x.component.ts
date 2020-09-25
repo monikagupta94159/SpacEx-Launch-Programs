@@ -29,8 +29,7 @@ export class SpaceXComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(){
-   // console.log('ngOnChanges: ');
-    
+
   }
   filterDates(date){
     this.selected = !this.selected;
