@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
     SpaceXComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule, 
     FormsModule
