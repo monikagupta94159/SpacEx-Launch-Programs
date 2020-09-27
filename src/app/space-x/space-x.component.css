@@ -9,13 +9,21 @@ body{
 }
 .container {
   background-color:#e5e5e5 ;
-  padding: .5%;
+  padding: 1%;
 }
 
 .heading{
-  margin-bottom: 3%;
+  margin: 0 0 1% 1%;
 }
 
+.heading:focus{
+    outline: none;
+    cursor: pointer;
+}
+
+.heading:hover{
+    cursor: pointer;
+}
 .row{
   max-width: 1440px;
   margin: 0 auto;
@@ -63,6 +71,13 @@ body{
   float: left;
 }
 
+
+.right-date{
+  cursor: pointer;;
+}
+.left-date{
+  cursor: pointer;;
+}
 .right-date{
   float: right;
 }
@@ -135,6 +150,11 @@ footer{
   .container{
     padding: 2%; 
    }
+
+   .heading{
+      margin-bottom: 3%;
+      font-size: 28px;
+    }
 
   .left{
     margin: 0 0 2% 0;
