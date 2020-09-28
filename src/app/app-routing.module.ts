@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SpaceXComponent } from './space-x/space-x.component';
 
 const routes: Routes = [
-    {path: '', component: SpaceXComponent },
+  { path: '', redirectTo: '/v3/launches', pathMatch: 'full' },
     {path: 'v3/launches', component: SpaceXComponent}
 ];
 

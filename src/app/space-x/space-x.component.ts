@@ -41,7 +41,11 @@ export class SpaceXComponent implements OnInit, OnChanges {
 
   }
   filterDates(date){
-    this.dateSelected = date;
+    if(this.dateSelected === date){
+      this.dateSelected = undefined;
+   } else{
+     this.dateSelected = date; 
+   }
     let navigationExtras: NavigationExtras = {
       queryParams : {
         'limit': 100,
@@ -58,7 +62,11 @@ export class SpaceXComponent implements OnInit, OnChanges {
   }
 
    filterLaunch(boolean){
-  this.launchValue = boolean;
+    if(this.launchValue === boolean){
+      this.launchValue = undefined;
+   } else{
+    this.launchValue = boolean;
+   }
   let navigationExtras: NavigationExtras = {
     queryParams : {
       'limit': 100,
@@ -74,7 +82,11 @@ export class SpaceXComponent implements OnInit, OnChanges {
    }
 
    filterLand(boolean) {
+    if(this.landValue === boolean){
+      this.landValue = undefined;
+   } else{
     this.landValue = boolean;
+   }
     let navigationExtras: NavigationExtras = {
       queryParams : {
         'limit': 100,
@@ -87,6 +99,15 @@ export class SpaceXComponent implements OnInit, OnChanges {
       this.spaceXData = data;
       this.router.navigate(['v3/launches'], navigationExtras);
     })
+   }
+
+   homePage(){
+    let navigationExtras: NavigationExtras = {
+      queryParams : {
+        'limit': 100,
+      }
+    }
+      this.router.navigate(['v3/launches'], navigationExtras);
    }
 
 }
