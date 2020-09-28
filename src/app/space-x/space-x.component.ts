@@ -101,13 +101,4 @@ export class SpaceXComponent implements OnInit, OnChanges {
     })
    }
 
-   homePage(){
-    let navigationExtras: NavigationExtras = {
-      queryParams : {
-        'limit': 100,
-      }
-    }
-      this.router.navigate(['v3/launches'], navigationExtras);
-   }
-
 }
