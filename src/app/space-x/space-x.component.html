@@ -1,6 +1,6 @@
 
   <div class="container">
-    <h1 class="heading" [routerLink]="'/'"><b>SpacEX Launch Programs</b></h1>
+    <h1 class="heading" (click)="homePage()"><b>SpacEX Launch Programs</b></h1>
     <div class="row clearfix">
         <div class="left">
                 <h2>Filters</h2>
@@ -68,7 +68,7 @@
                         </div>
                         <div class="details">
                           <span><b>Successful Landing:</b></span>
-                          <span class="text">{{data.land_success}}</span>  
+                          <span class="text">{{data.rocket['first_stage']['cores'][0].land_success}}</span>  
                         </div>
                 </div>
             </div>
